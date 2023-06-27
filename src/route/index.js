@@ -767,5 +767,7 @@ router.get('/js', function (req, res) {
 
 
 
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
