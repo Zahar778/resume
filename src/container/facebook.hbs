@@ -1,0 +1,65 @@
+<div>
+  <section>
+    <h1>{{name}}</h1>
+    <br>
+    {{#each users}}
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    <br>
+    {{#each friends}}
+     <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    <br>
+     {{#each mutual_friends}}
+     <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    <br>
+    {{/each}}
+    {{/each}}
+    {{#each groups }}
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>description - {{description}}</li>
+    <br>
+    {{#each members}}
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    {{/each}}
+    {{/each}}
+    <br>
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    <br>
+     {{#each mutual_friends}}
+     <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    {{/each}}
+    <br>
+    {{#each groups }}
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>description - {{description}}</li>
+    <br>
+    {{#each members}}
+    <li>id - {{id}}</li>
+    <li>name - {{name}}</li>
+    <li>gender - {{gender}}</li>
+    <li>age - {{age}}</li>
+    <br>
+    {{/each}}
+    {{/each}}
+    {{/each}}
+  </section>
+</div>
