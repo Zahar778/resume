@@ -1,0 +1,27 @@
+  <h1>{{name}}</h1>
+
+        <strong>{{description}}</strong> 
+        {{#with history}}
+       <li> Year - {{year}} </li>
+        <li>Founder - {{founder}} </li>
+        {{/with}}
+        
+ 
+        <li>{{types}}</li>
+
+        <ol>{{#with syntax}}
+        {{variables}}
+        {{functions}}
+        {{conditionals}}
+        {{loops}}
+        {{classes}}
+        {{/with}}  {{features}}
+        {{libraries}}
+        {{tools}} 
+        </ol>
+      </div>
+  <div > <strong> {{#each community}}
+        {{name}}
+        {{type}}
+        {{/each}}</strong> 
+</div>
