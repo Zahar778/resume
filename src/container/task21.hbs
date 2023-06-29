@@ -1,0 +1,64 @@
+<main>
+  {{#with heading}}
+  {{#with main}}
+  <div><h1>{{title}}</h1></div>
+  <div class="display-7">{{text}}</div>
+  <br>
+  {{#with button_text}}
+  <button class="btn btn-primary">{{solid}}</button>
+  <br>
+  <br>
+  <button class="btn btn-outline-primary">{{outline}}</button>
+  {{/with}}
+  {{/with}}
+  {{#with second}}
+  <div><h2>{{title}}</h2></div>
+  <div class="display-7">{{text}}</div>
+  {{#with button_text}}
+  <button class="btn btn-secondary">{{solid}}</button>
+  <br>
+  <br>
+  <button class="btn btn-outline-secondary">{{outline}}</button>
+  {{/with}}
+  {{/with}}
+  {{#with subblock}}
+    <div><h3>{{title}}</h3></div>
+  <div class="display-7">{{text}}</div>
+  {{#with button_text}}
+  <button class="btn btn-dark">{{solid}}</button>
+  <br>
+  <br>
+  <button class="btn btn-outline-dark">{{outline}}</button>
+  {{/with}}
+  {{/with}}
+  {{/with}}
+  {{#with nested_display}}
+  <div class="display-1">{{title}}</div>
+  {{#with children_display}}
+  <div class="display-4">{{title}}</div>
+  <div class="display-7">{{text}}</div>
+  {{#with button}}
+  <button class="btn btn-warning">{{text}}</button>
+  {{/with}}
+  {{/with}}
+  <h6>{{header_text}}</h6>
+  {{#with button}}
+  <button class="btn btn-info">{{text}}</button>
+  {{/with}}
+  {{/with}}
+  <br>
+  <br>
+  <br>
+  {{#with paragraph}}
+  <div class="display-7">{{title}}</div>
+    <div class="display-7">{{text}}</div>
+    {{#with button}}
+<button class="btn btn-link">{{text}}</button> <br>
+<a href="https://google.com"><li class="btn btn-link" >{{url}}</li> </a>
+  {{/with}}
+  {{#each list_name}}
+  <button class="btn btn-link">{{text}}</button> <br>
+<a href="https://google.com"><li class="btn btn-link" >{{url}}</li> </a>
+  {{/each}}
+  {{/with}}
+</main>
