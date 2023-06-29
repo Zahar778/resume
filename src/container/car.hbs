@@ -1,116 +1,80 @@
 <div>
     <section>
-        <h1>{{make}}</h1>
-        <h2>{{model}}</h2>
-        <hr>
-        <li>year - {{year}}</li>
-        <li>color - {{color}}</li>
+        <h1>{{make}} {{model}}</h1>
+        
+        <ol>{{color}} {{year}}</ol>
+        </section>
         {{#with features}}
         {{#with interior}}
         {{#with seats}}
-        <li>material - {{material}}</li>
-        <li>color - {{color}}</li>
-        <li>heated - {{heated}}</li>
-        <li>ventilated - {{ventilated}}</li>
+        <hr>
+        <ol>material - {{material}} / color - {{color}} </ol>
+        <ol>heated - {{heated}}  / ventilated - {{ventilated}}</ol>
+        <ol></ol>
         {{/with}}
         <br>
         <hr>
         {{#with dashboard}}
-        <li>material - {{material}}</li>
-        <li>color - {{color}}</li>
+        <ol>material - {{material}} / color - {{color}}</ol>
         {{#with display}}
-        <li>type - {{type}}</li>
-        <li>size - {{size}}</li>
-        <li>resolution - {{resolution}}</li>
-        <li>touchscreen - {{touchscreen}}</li>
+        <ol>type - {{type}} / size - {{size}}</ol>
+        <ol>resolution - {{resolution}} / touchscreen - {{touchscreen}}</ol>
         {{/with}}
         {{/with}}
         <br>
         <hr>
         {{#with audio}}
-        <li>system - {{system}}</li>
-        <li>speakers - {{speakers}}</li>
-        <li>subwoofersubwoofer - {{subwoofer}}</li>
-        <li>bluetooth - {{bluetooth}}</li>
-        <li>USB - {{USB}}</li>
+        <ol>system - {{system}} / speakers - {{speakers}} / subwoofersubwoofer - {{subwoofer}}</ol>
+        <ol>bluetooth - {{bluetooth}} / USB - {{USB}}</ol>
         {{/with}}
         {{/with}}
-        <br>
-        <hr>
         {{#with exterior}}
         {{#with wheels}}
-        <li>size - {{size}}</li>
-        <li>type - {{type}}</li>
-        <li>color - {{color}}</li>
+        <ol>size - {{size}} / type - {{type}} / color - {{color}}</ol>
         {{/with}}
-        <br>
-        <hr>
         {{#with headlights}}
-        <li>type - {{type}}</li>
-        <li>brightness - {{brightness}}</li>
-        <li>automatic - {{automatic}}</li>
+        <ol>type - {{type}} / brightness - {{brightness}} / automatic - {{automatic}}</ol>
         {{/with}}
         <br>
         <hr>
         {{#with sunroof}}
-        <li>type - {{type}}</li>
-        <li>size - {{size}}</li>
-        <li>automatic - {{automatic}}</li>
+        <ol>type - {{type}} / size - {{size}} / automatic - {{automatic}}</ol>
         {{/with}}
         {{/with}}
         <br>
         <hr>
         {{#with safety}}
         {{#with airbags}}
-        <li>front - {{front}}</li>
-        <li>side - {{side}}</li>
-        <li>knee - {{knee}}</li>
-        <li>rear - {{rear}}</li>
+        <ol>front - {{front}} / side - {{side}}</ol>
+        <ol>rear - {{rear}} / knee - {{knee}}</ol>
         {{/with}}
-        <br>
-        <hr>
         {{#with assistance}}
-        <li>blind_spot_monitoring - {{blind_spot_monitoring}}</li>
-        <li>rear_cross_traffic_alert - {{rear_cross_traffic_alert}}</li>
-        <li>lane_departure_warning - {{lane_departure_warning}}</li>
-        <li>adaptive_cruise_control - {{adaptive_cruise_control}}</li>
-        <li>collision_warning - {{collision_warning}}</li>
+        <ol>Blind spot monitoring - {{blind_spot_monitoring}} / Rear cross traffic alert - {{rear_cross_traffic_alert}}</ol>
+        <ol>Lane departure warning - {{lane_departure_warning}} / Adaptivecruise control - {{adaptive_cruise_control}}</ol>
+        <ol>Collisionwarning - {{collision_warning}}</ol>
         {{/with}}
             {{/with}}
                 {{/with}}
                 <br>
         <hr>
         {{#with engine}}
-        <li>type - {{type}}</li>
-        <li>displacement - {{displacement}}</li>
-        <li>horsepower - {{horsepower}}</li>
-        <li>torque - {{torque}}</li>
+        <ol>type - {{type}} / torque - {{torque}}</ol>
+        <ol>displacement - {{displacement}} / horsepower - {{horsepower}}</ol>
         {{#with transmission}}
-        <li>type - {{type}}</li>
-        <li> gears - {{gears}}</li>
+        <ol>type - {{type}} / gears - {{gears}}</ol>
         {{/with}}
         {{/with}}
         <br>
         <hr>
         {{#with fuel_economy}}
-        <li>city - {{city}}</li>
-        <li>highway - {{highway}}</li>
-        <li>combined - {{combined}}</li>
+        <ol>city - {{city}} / highway - {{highway}} / combined - {{combined}}</ol>
         {{/with}}
-        <br>
-        <hr>
         {{#with price}}
-        <li>base - {{base}}</li>
-        <li>destination - {{destination}}</li>
+        <ol>base - {{base}} / destination - {{destination}} / navigation - {{navigation}}</ol>
         {{#with options}}
-        <li>navigation - {{navigation}}</li>
-        <li>moonroof - {{moonroof}}</li>
-        <li>premium_paint - {{premium_paint}}</li>
-
+        <ol>moonroof - {{moonroof}} / premium_paint - {{premium_paint}}</ol>
         {{/with}}
-        <br>
-        <hr>
-        <li>total - {{total}}</li>
+        <ol>total - {{total}}</ol>
         {{/with}}
  
 
