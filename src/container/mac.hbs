@@ -1,62 +1,139 @@
 <div>
   <section>
-    <h1>{{name}}</h1>
-    <li>description - {{description}}</li>
-    <li>price - {{price}}</li>
-    <li>category - {{category}}</li>
-    {{#with features}}
+    <h1> {{name}} </h1>
+
+      <h2>{{description}}
+      <br>
+      Price - {{price}}
+    </h2>
+    
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       <strong> Processor </strong>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong> 
+          {{#with features}}
     {{#with processor}}
-    <li>brand - {{brand}}</li>
-    <li>model - {{model}}</li>
-    <li>speed - {{speed}}</li>
-    <li>cores - {{cores}}</li>
-    <li>cache - {{cache}}</li>
-    {{/with}}
+    
+    Brand - {{brand}} <br>
+    Speed - {{speed}}<br>
+    Cores - {{cores}}<br>
+    Cache - {{cache}} <br>
+     {{/with}}
+   
+    </strong>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <strong> Memory </strong>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong> 
     {{#with memory}}
-    <li>type - {{type}}</li>
-    <li>size - {{size}}</li>
-    <li>speed - {{speed}}</li>
+    Type - {{type}}<br>
+    Size - {{size}}<br>
+    Speed - {{speed}}<br>
     {{/with}}
     {{#with storage}}
-    <li>type - {{type}}</li>
-    <li>size - {{size}}</li>
+    Type - {{type}}<br>
+    Size - {{size}}<br>
+    {{/with}}
+    </strong> 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+       <strong> Storage </strong>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>{{#with storage}}
+    type - {{type}} <br>
+    size - {{size}} <br>
     {{/with}}
     {{#with display}}
-    <li>size - {{size}}</li>
-    <li>resolution - {{resolution}}</li>
-    <li>technology - {{technology}}</li>
-    <li>technology - {{technology}}</li>
-    <li>brightness - {{brightness}}</li>
-    <li>refresh_rate - {{refresh_rate}}</li>
-    {{/with}}
-    {{#with graphics}}
-    <li>brand - {{brand}}</li>
-    <li>model - {{model}}</li>
-    <li>memory - {{memory}}</li>
-    {{/with}}
-    {{#each ports}}
-    <li>type - {{type}}</li>
-    <li>count - {{count}}</li>
+    size - {{size}} br
+    resolution - {{resolution}}<br>
+    technology - {{technology}}<br>
+    technology - {{technology}}<br>
+    brightness - {{brightness}}<br>
+    refresh_rate - {{refresh_rate}} <br>
+    {{/with}}</strong> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+       <strong> Graphics </strong>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <strong>
+        {{#with graphics}}
+    brand - {{brand}} <br>
+    model - {{model}} <br>
+    memory - {{memory}} <br>
+    </strong>
+    {{/with}} 
+    </div>
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       <strong> Ports / And so on...  </strong>
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <strong>
+{{#each ports}}
+    type - {{type}} <br>
+    count - {{count}} <br>
     {{#each features}}
-    <li>{{this}}</li>
+    {{this}} <br>
     {{/each}}
     {{/each}}
     {{#with battery}}
-    <li>type - {{type}}</li>
-    <li>capacity - {{capacity}}</li>
-    <li>life - {{life}}</li>
+    type - {{type}} <br>
+    capacity - {{capacity}} <br>
+    life - {{life}} <br>
     {{/with}}
-    <li>weight - {{weight}}</li>
-    {{#with dimensions}}
-    <li>height - {{height}}</li>
-    <li>width - {{width}}</li>
-    <li>depth - {{depth}}</li>
+    weight - {{weight}} <br>
+    {{#with dimensions}} 
+    height - {{height}}<br>
+    width - {{width}}<br>
+    depth - {{depth}}<br>
     {{/with}}
-    <li>operating_system - {{operating_system}}</li>
+    operating_system - {{operating_system}}<br>
     {{#each accessories}}
-    <li>name - {{name}}</li>
-    <li>price - {{price}}</li>
+    name - {{name}}<br>
+    price - {{price}}<br>
     {{/each}}
     {{/with}}
   </section>
 </div>
+      </strong></div>
+    </div>
+  </div>
+   
+    
+    
+    

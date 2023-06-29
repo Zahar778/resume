@@ -272,7 +272,7 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
 
-    layout: "basic",
+    layout: "default",
 
     
     name: 'Apple MacBook Pro',
