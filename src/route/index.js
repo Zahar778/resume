@@ -273,7 +273,7 @@ router.get('/facebook', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
 
-    layout: "basic",
+    layout: "default",
     name: 'Facebook',
     users: [
       {
