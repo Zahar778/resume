@@ -64,18 +64,15 @@
     
    {{/with}}
     {{/each}}
- <hr class="mt-5">
-{{#each buttons}}
-<div class="row">
-  <div class="col-12">
-    {{#each switch}}
-    <div class="form-check form-switch">
-      <input type="checkbox" class="form-check-input">
-      <label class="form-check-label">{{text}}</label>
-    </div>
-    {{/each}}
-  </div>
+      
+
+<div>
+  <hr class="mt-5">
 </div>
+{{#each switch}}
+{{text}}
 {{/each}}
+<div>
 {{/with}}
+</div>
 </main>
