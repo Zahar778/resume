@@ -14,7 +14,7 @@
 {{#with newsBlock}}
 <div class=" text-center display-2 mb-4"> {{title}}</div>
 {{#each cards}}
-  <div class="col-2 ">
+  <div class="col-3 ">
     <div class="card text-bg-dark mb-5">
       <div class="card card-header ">
           {{title}}
@@ -36,7 +36,7 @@
 
 <hr>
   <div class="row gy-4">
-<div class="col-5 nav" >
+<div class="col-7 nav" >
   <div class="nav-tabs">
   <section class="nav mb-4">
     
@@ -63,7 +63,7 @@
 
 <div class="row">
   {{#each cards}}
-  <div class="col-2 card me-4 mb-4 ">
+  <div class="col-3 card me-4 mb-4 ">
     <img class="card-img-top" src="{{image}}" alt="{{title}}">
     <div class="card-header display-7"> {{title}}
     {{#if isHot}}
@@ -112,11 +112,11 @@
 <div class="row">
   {{#each footer}}
   <div class="col-2">
-    <ul>
+    <ul class="nav">
       {{#each this}}
-        <li>
-          <a href="{{link}}">{{text}}</a>
-        </li>
+        <div class="">
+          <a class="" href="{{link}}">{{text}}</a>
+        </div>
       {{/each}}
     </ul>
   </div>
