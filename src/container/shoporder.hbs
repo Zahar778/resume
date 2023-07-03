@@ -2,26 +2,80 @@
 
   
   {{#with navigation}}
-  <div class="nav mb-7">
+
+  <div class="nav">
     {{#each links}}
-    <div class="nav-item">
+    <div class="nav-tabs">
     {{#if href}}
   <a class="nav-link" href="{{href}}">{{text}}</a>
   {{else}}
-  <a class="nav-link disabled" href="#">{{text}}</a>
+  <a class="nav-link disabled me-5 mb-5" href="#">{{text}}</a>
   {{/if}}
-  </div>
+  </div>  
   {{/each}}
   </div>
   {{/with}}
 
 
-  <div class="text-center display-5 me-7">
+  <div class="text-center text- display-5 mb-5">
     {{header}}
   </div>
   {{#with contacts_data}}
-  <div class="display-6"> 
+  <div class="display-6 mb-4"> 
     {{title}}
   </div>
+  {{#each buttons}}
+  {{#if isPrimary}}
+  <button class="btn btn-warning ">{{text}}</button>
+  {{else}}
+  <button class="btn btn-outline-warning">{{text}}</button>
+  {{/if}}
+  {{/each}}
+  {{#each form}}
+  {{#with surname}}
+ <div class="row g-4 my-1">
+  <div class="col-5">
+    <label class="form-label">{{label}}</label>
+    <input type="text" class="form-control" text-secondary placeholder="{{placeholder}}">
+    <div class="form-text text-primary">{{caption}}</div>
+  </div>
   {{/with}}
+   {{#with name}}
+   <div class="col-5">
+    <label class="form-label">{{label}}</label>
+    <input type="text" class="form-control" text-secondary placeholder="{{placeholder}}">
+    <div class="form-text text-primary">{{caption}}</div>
+  </div>
+    {{/with}}
+   {{#with phone}}
+   <div class="col-5">
+    <label class="form-label">{{label}}</label>
+    <input type="text" class="form-control" text-secondary placeholder="{{placeholder}}">
+    <div class="form-text text-primary">{{caption}}</div>
+  </div>
+  {{/with}}
+   {{#with email}}
+   <div class="col-5">
+    <label class="form-label">{{label}}</label>
+    <input type="text" class="form-control" text-secondary placeholder="{{placeholder}}">
+    <div class="form-text text-primary">{{caption}}</div>
+  </div>
+  </div>
+    
+   {{/with}}
+    {{/each}}
+ <hr class="mt-5">
+{{#each buttons}}
+<div class="row">
+  <div class="col-12">
+    {{#each switch}}
+    <div class="form-check form-switch">
+      <input type="checkbox" class="form-check-input">
+      <label class="form-check-label">{{text}}</label>
+    </div>
+    {{/each}}
+  </div>
+</div>
+{{/each}}
+{{/with}}
 </main>
