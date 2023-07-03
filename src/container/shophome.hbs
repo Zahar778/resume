@@ -109,20 +109,19 @@
 </div>
 {{/with}}
 <hr>
-{{#each footer}}
 <div class="row">
-<div class="col-2">
-
-<a href="{{link}}" class="btn btn-link ">{{text}}</a>
-
-
-<a href="{{link}}" class="btn btn-dark ">{{text}}</a>
-
-
-<a href="{{link}}" class="btn btn-info ">{{text}}</a>
-
+  {{#each footer}}
+  <div class="col-2">
+    <ul>
+      {{#each this}}
+        <li>
+          <a href="{{link}}">{{text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/each}}
 </div>
 
-</div>
-{{/each}}
+
   </main>
