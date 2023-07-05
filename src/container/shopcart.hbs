@@ -35,16 +35,16 @@
       <div class="card-header"><strong>{{name}}</strong></div>
       <div>{{description}}</div>
     </div>
-    <div class="col-5 mt-4">
+    <div class="col-4 mt-4">
       {{#with price}}
       <div class="mx-5 px-5 mt-5">{{title}}:</div>
       <div class="mx-5 display-6"><strong>{{value}}</strong></div>
       {{/with}}
-      <div class="col-12">
-        <div class="text-center">{{amount}}</div>
-      </div>
     </div>
-    <div class="col-2 d-flex align-items-center flex-column">
+    <div class="col-2 mt-5">
+      <div class="text-center mt-5">{{amount}}</div>
+    </div>
+    <div class="col-2 mt-4 d-flex align-items-center flex-column">
       {{#each buttons}}
         {{#if isPrimary}}
         <button class="rounded btn btn-primary mt-5">{{text}}</button>
@@ -56,6 +56,7 @@
   </div>
 </div>
 {{/each}}
+
 
 
 
