@@ -118,81 +118,83 @@
 </div>
 </div>
 
- 
+  {{/with}}
 {{/with}}
   {{/with}}
-    {{/with}}
+   
   <div class="m-5">
   <hr>
 </div>
 {{#each reviewList}}
 <div class="row">
-<div class="card">
-  <div class="card-body">
-<div class="display-7">
-  {{#with title}}
-<strong>{{userName}}</strong>
-<div>{{caption}}</div>
-<div>{{date}}</div>
-{{/with}}
-{{#with reviewBody}}
-{{#with seller}}
-<div class="my-3">{{title}}:{{value}}</div>
-{{/with}}
-{{#with rating}}
-<div class="my-3">{{title}}:{{value}}</div>
-{{/with}}
-<div  class="my-3">{{text}}</div>
-{{#with advantages}}
-<div><strong>{{title}}:</strong></div>
-<div class="mt-1">{{text}}</div>
-{{/with}}
-{{#with disadvantages}}
-<div><strong>{{title}}:</strong></div>
-<div class="mt-1">{{text}}</div>
-{{/with}}
-{{#each images}}
-<img src="{{this}}" alt="">
-{{/each}}
-{{#each coments}}
-<div class="ms-5 mt-1"><strong>{{userName}}</strong></div>
-<div class="ms-5 mt-1">{{date}}</div>
-<div class="ms-5 mt-1">{{text}}</div>
-{{/each}}
-{{/with}}
-</div>
+  <div class="card">
+    <div class="card-body">
+      <div class="display-7">
+        {{#with title}}
+        <strong>{{userName}}</strong>
+        <div>{{caption}}</div>
+        <div>{{date}}</div>
+        {{/with}}
+        {{#with reviewBody}}
+        {{#with seller}}
+        <div class="my-3">{{title}}:{{value}}</div>
+        {{/with}}
+        {{#with rating}}
+        <div class="my-3">{{title}}:{{value}}</div>
+        {{/with}}
+        <div class="my-3">{{text}}</div>
+        {{#with advantages}}
+        <div><strong>{{title}}:</strong></div>
+        <div class="mt-1">{{text}}</div>
+        {{/with}}
+        {{#with disadvantages}}
+        <div><strong>{{title}}:</strong></div>
+        <div class="mt-1">{{text}}</div>
+        {{/with}}
+        {{#each images}}
+        <img src="{{this}}" alt="">
+        {{/each}}
+        {{#each coments}}
+        <div class="ms-5 mt-1"><strong>{{userName}}</strong></div>
+        <div class="ms-5 mt-1">{{date}}</div>
+        <div class="ms-5 mt-1">{{text}}</div>
+        {{/each}}
+        {{/with}}
+      </div>
+    </div>
   </div>
 </div>
-</div>
+{{/each}}
 
 {{#with service}}
 <div class="row">
-  <div class="col-10">
-<div class="alert alert-dark">
-<h2 class="mb-3">{{title}}</h2>
-<div class="display-9 mb-2">{{description}}</div>
-{{#each buttons}}
- <a class="btn btn-primary mb-3" href="{{link}}">{{text}}</a> <br>
-{{/each}}
+  <div class="col-10 m-5">
+    <div class="alert alert-dark">
+      <h2 class="mb-3">{{title}}</h2>
+      <div class="display-9 mb-2">{{description}}</div>
+      {{#each buttons}}
+      <a class="btn btn-primary mb-3" href="{{link}}">{{text}}</a> <br>
+      {{/each}}
+    </div>
+  </div>
+  {{/with}}
 </div>
-</div>
-</div>
- <div class="nav">
+<div class="nav">
   {{#each footer}}
   <div class="col-2">
     <ul class="nav-item">
       {{#each this}}
-        <div>
-          <a class="nav-link" href="{{link}}">{{text}}</a>
-           {{#if @last}} Disabled{{/if}}
-        </div>
+      <div>
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+        {{#if @last}} Disabled{{/if}}
+      </div>
       {{/each}}
     </ul>
   </div>
   {{/each}}
 </div>
-{{/with}}
-{{/each}}
+
+
 
 
   </main>
