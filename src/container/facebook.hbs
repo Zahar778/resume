@@ -1,0 +1,117 @@
+<H1>{{name}}</H1>
+{{#each users}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+</div>
+<br>
+<hr>
+<h2>Friends </h2>
+<br>
+{{#each friends}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+</div>
+<br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+</div>
+<br>
+<hr>
+<h2>Mutual friends </h2>
+<br>
+{{#each mutual_friends}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+   {{/each}}
+  {{/each}}
+</div>
+<br>
+<hr>
+<h2>Groups </h2>
+<br>
+{{#each groups}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{description}}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+</div>
+{{#each members}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+  {{/each}}
+    {{/each}}
+</div>
+<br>
+<hr>
+<br>
+{{#each friends}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+     {{/each}}
+  </div>
+  <br>
+<hr>
+<br>
+{{#each mutual_friends}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+     {{/each}}
+  </div>
+ {{#each groups}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{description}}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+</div>
+{{#each members}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{gender}} / {{age}} </h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a>id - {{id}}</a>
+  </div>
+  </div>
+  {{/each}}
+    {{/each}}
+    {{/each}}
+
