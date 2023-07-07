@@ -1,0 +1,122 @@
+<main>
+  <div class="row gy-4">
+    <div class="col-12">
+      <section>
+        {{#with navigation}}
+        {{#each links}}
+        <a href="{{href}}" class="btn btn-link">{{text}}</a>
+        {{/each}}
+        {{/with}}
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    {{#with newsBlock}}
+    <div class="text-center display-2 mb-4">{{title}}</div>
+    {{#each cards}}
+    <div class="col-3">
+      <div class="card text-bg-dark mb-5">
+        <div class="card-header">
+          {{title}}
+          {{#if isTop}}
+          <div><span class="badge text-bg-danger rounded">Top</span></div>
+          {{/if}}
+          {{#if isNew}}
+          <div><span class="badge text-bg-success rounded">New</span></div>
+          {{/if}}
+        </div>
+        <div class="card-body text-bg-dark mb-5">
+          <p class="display-12 mb-5">{{description}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{/with}}
+  </div>
+
+  <hr>
+
+  <div class="row gy-4">
+    <div class="col-7 nav">
+      <div class="nav-tabs">
+        <section class="nav mb-4">
+          {{#with goodsBlock}}
+          {{#each tabs}}
+          <div>
+            <a href="#" class="nav-link{{#if @last}} disabled{{/if}} me-3">{{text}}</a>
+          </div>
+          {{/each}}
+          {{/with}}
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      {{#each cards}}
+      <div class="col-3 card me-4 mb-4">
+        <img class="card-img-top" src="{{image}}" alt="{{title}}">
+        <div class="card-header display-7">{{title}}
+          {{#if isHot}}
+          <div><span class="badge text-bg-danger rounded">Top</span></div>
+          {{/if}}
+          {{#if isNew}}
+          <div><span class="badge text-bg-success rounded">New</span></div>
+          {{/if}}
+        </div>
+        <div class="card-body">
+          <div class="display-8">{{description}}</div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+
+
+  {{#with subscribe}}
+  <div class="row">
+    <div class="col-10">
+      <div class="alert alert-dark">
+        <h2 class="mb-3">{{header}}</h2>
+        <div class="display-9 mb-2">{{description}}</div>
+        {{#each buttons}}
+        <a class="btn btn-primary mb-3" href="{{link}}">{{text}}</a><br>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{/with}}
+
+  <hr>
+
+  {{#with service}}
+  <div class="row">
+    <div class="col-10">
+      <div class="alert alert-success">
+        <h2 class="mb-3 text-center">{{title}}</h2>
+        <div class="display-9 text-center mb-2">{{description}}</div>
+        {{#each buttons}}
+        <div class="text-center"><a class="btn btn-primary mb-3" href="{{link}}">{{text}}</a></div><br>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{/with}}
+
+  <hr>
+
+  <div class="nav">
+    {{#each footer}}
+    <div class="col-2">
+      <ul class="nav-item">
+        {{#each this}}
+        <div class="">
+          <a class="nav-link{{#if @last}} disabled{{/if}}" href="{{link}}">{{text}}</a>
+        </div>
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+</main>
