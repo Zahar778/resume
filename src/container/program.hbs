@@ -1,0 +1,82 @@
+{{#with program}}
+  <div>
+{{#with excursion}}
+<h1>{{name}}</h1>
+<section>
+{{#with location}}
+<li>city - {{city}}</li>
+<li>country - {{country}}</li>
+ {{/with}}
+<li>date - {{date}}</li>
+  </section>
+  </div>
+<div>
+  {{#each program}}
+  <h1>{{name}}</h1>
+  <li>Type - {{type}}</li>
+  <li>Duration - {{duration}}</li>
+  {{/each}}
+  {{#each program}}
+  {{#with details}}
+  {{#with museum}}
+  <h1>{{name}}</h1>
+  {{#with location}}
+  <li>Address - {{address}}</li>
+  <li>City - {{city}}</li>
+  <li>Country - {{country}} </li>
+  {{/with}}
+  <div>
+{{#each exhibits}}
+<h1>{{name}}</h1>
+<li>artist - {{artist}}</li>
+{{#if artist}}
+{{artist}}
+{{else}}
+(художник отсутствует)
+{{/if}}
+<li>description - {{description}}</li>
+<li>audio_guide - {{audio_guide}}</li>
+{{/each}}
+{{/with}}
+  </div>
+  </div>
+  <div>
+    {{#with guide}}
+      <h1>{{name}}</h1>
+    <section>
+      <li>language - {{language}} </li>
+      <li>rating - {{rating}}</li>
+      {{/with}}
+    </section>
+  </div>
+  <div>
+    {{#with venue}}
+    <h1>{{name}}</h1>
+    <section>
+      
+      {{#with location}}
+<li>address - {{address}} </li>
+<li>city - {{city}}</li>
+<li>country - {{country}} </li>
+    </section>
+    {{/with}}
+    {{/with}}
+  </div>
+  <div>
+    {{#each performers}}
+    <h1>{{name}}</h1>
+    <section>
+<li>type - {{type}}</li>
+    </section>
+    {{/each}}
+  </div>
+  
+
+  
+  {{/with}}
+  {{/each}}
+ {{/with}}
+  {{/with}}
+
+
+</div>
