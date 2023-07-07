@@ -2347,6 +2347,7 @@ router.get('/shopcart', function (req, res) {
 
 // ================================================================
 
+
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -2357,7 +2358,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-    // layout: 'shop',
+
     navigation: {
       links: [
         {
