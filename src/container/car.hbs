@@ -1,0 +1,82 @@
+<div>
+    <section>
+        <h1>{{make}} {{model}}</h1>
+        
+        <ol>{{color}} {{year}}</ol>
+        </section>
+        {{#with features}}
+        {{#with interior}}
+        {{#with seats}}
+        <hr>
+        <ol>material - {{material}} / color - {{color}} </ol>
+        <ol>heated - {{heated}}  / ventilated - {{ventilated}}</ol>
+        <ol></ol>
+        {{/with}}
+        <br>
+        <hr>
+        {{#with dashboard}}
+        <ol>material - {{material}} / color - {{color}}</ol>
+        {{#with display}}
+        <ol>type - {{type}} / size - {{size}}</ol>
+        <ol>resolution - {{resolution}} / touchscreen - {{touchscreen}}</ol>
+        {{/with}}
+        {{/with}}
+        <br>
+        <hr>
+        {{#with audio}}
+        <ol>system - {{system}} / speakers - {{speakers}} / subwoofersubwoofer - {{subwoofer}}</ol>
+        <ol>bluetooth - {{bluetooth}} / USB - {{USB}}</ol>
+        {{/with}}
+        {{/with}}
+        {{#with exterior}}
+        {{#with wheels}}
+        <ol>size - {{size}} / type - {{type}} / color - {{color}}</ol>
+        {{/with}}
+        {{#with headlights}}
+        <ol>type - {{type}} / brightness - {{brightness}} / automatic - {{automatic}}</ol>
+        {{/with}}
+        <br>
+        <hr>
+        {{#with sunroof}}
+        <ol>type - {{type}} / size - {{size}} / automatic - {{automatic}}</ol>
+        {{/with}}
+        {{/with}}
+        <br>
+        <hr>
+        {{#with safety}}
+        {{#with airbags}}
+        <ol>front - {{front}} / side - {{side}}</ol>
+        <ol>rear - {{rear}} / knee - {{knee}}</ol>
+        {{/with}}
+        {{#with assistance}}
+        <ol>Blind spot monitoring - {{blind_spot_monitoring}} / Rear cross traffic alert - {{rear_cross_traffic_alert}}</ol>
+        <ol>Lane departure warning - {{lane_departure_warning}} / Adaptivecruise control - {{adaptive_cruise_control}}</ol>
+        <ol>Collisionwarning - {{collision_warning}}</ol>
+        {{/with}}
+            {{/with}}
+                {{/with}}
+                <br>
+        <hr>
+        {{#with engine}}
+        <ol>type - {{type}} / torque - {{torque}}</ol>
+        <ol>displacement - {{displacement}} / horsepower - {{horsepower}}</ol>
+        {{#with transmission}}
+        <ol>type - {{type}} / gears - {{gears}}</ol>
+        {{/with}}
+        {{/with}}
+        <br>
+        <hr>
+        {{#with fuel_economy}}
+        <ol>city - {{city}} / highway - {{highway}} / combined - {{combined}}</ol>
+        {{/with}}
+        {{#with price}}
+        <ol>base - {{base}} / destination - {{destination}} / navigation - {{navigation}}</ol>
+        {{#with options}}
+        <ol>moonroof - {{moonroof}} / premium_paint - {{premium_paint}}</ol>
+        {{/with}}
+        <ol>total - {{total}}</ol>
+        {{/with}}
+ 
+
+    </section>
+</div>
