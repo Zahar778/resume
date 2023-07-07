@@ -1,0 +1,94 @@
+<main>
+  {{#with heading}}
+  {{#with main}}
+  <div class="card card-body">
+    <div class="card card-body">
+  <div><h1>{{title}}</h1></div>
+  <div class="display-7">{{text}}</div>
+  
+  <br>
+  {{#with button_text}}
+  <div>
+  <button class="btn btn-primary">{{solid}}</button>
+</div>
+  <br>
+  <br>
+  <div>
+  <button class="btn btn-outline-primary">{{outline}}</button>
+  </div>
+  </div>
+  {{/with}}
+  {{/with}}
+  {{#with second}}
+  <br>
+  <div class="card card-body">
+  <div><h2>{{title}}</h2></div>
+  <div class="display-7">{{text}}</div>
+  {{#with button_text}}
+  <div><button class="btn btn-secondary">{{solid}}</button></div>
+  <br>
+  <br>
+  <div><button class="btn btn-outline-secondary">{{outline}}</button>
+  </div>
+  </div>
+  {{/with}}
+  {{/with}}
+  {{#with subblock}}
+  <br>
+  <div class="card card-body"> 
+    <div><h3>{{title}}</h3></div>
+  <div class="display-7">{{text}}</div>
+  {{#with button_text}}
+  <div>
+  <button class="btn btn-dark">{{solid}}</button>
+  </div>
+  <br>
+  <br>
+  <div>
+  <button class="btn btn-outline-dark">{{outline}}</button>
+  </div>
+  </div>
+  </div>
+  {{/with}}
+  {{/with}}
+  {{/with}}
+  </div>
+  <div class="card card-body">
+  {{#with nested_display}}
+  <div class="card card-body"> 
+  <div class="display-1">{{title}}</div>
+  {{#with children_display}}
+  <div class="display-4">{{title}}</div>
+  <div class="display-7">{{text}}</div>
+  {{#with button}}
+  <div><button class="btn btn-warning">{{text}}</button></div>
+  </div>
+  {{/with}}
+  {{/with}}
+  <h6>{{header_text}}</h6>
+  {{#with button}}
+  <div> <button class="btn btn-info">{{text}} je</button> </div>
+  </div>
+  </div>
+  {{/with}}
+  {{/with}}
+  <br>
+  <br>
+  <br>
+  {{#with paragraph}}
+  <div class="card card-body">
+  <div class="display-7">{{title}}</div>
+    <div class="display-7">{{text}}</div>
+    {{#with button}}
+<div><button class="btn btn-link">{{text}}</button></div>
+  {{/with}}
+   <div class="card card-body">
+  {{#each list_name}}
+  <div>
+    <li><a href="{{url}}" class="btn btn-link">{{text}}</a></li>
+  </div>
+  {{/each}}
+  {{/with}}
+  </div>
+  </div>
+</main>
