@@ -526,6 +526,11 @@ router.get('/task31', function (req, res) {
         {
           name: 'Stark Industries',
           link: 'https://www.starkindustries.com/',
+        }
+      ]
+    },
+  })
+})
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task22', function (req, res) {
@@ -585,7 +590,7 @@ router.get('/task22', function (req, res) {
       },
     },
   })
-
+})
 
 
 // ================================================================
@@ -745,6 +750,9 @@ router.get('/facebook', function (req, res) {
           },
         ],
       },
+    ],
+  })
+})
 
 // ================================================================
 
@@ -852,6 +860,7 @@ router.get('/person', function (req, res) {
 
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
+
   res.render('bio', {
 
     layout: 'basic',
@@ -944,8 +953,10 @@ router.get('/bio', function (req, res) {
       year: 'Late 15th to early 16th century',
       field: 'Invention',
     },
+  
   })
 })
+
 
 // ================================================================
 
@@ -1039,6 +1050,7 @@ router.get('/program', function (req, res) {
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
+
   res.render('web', {
 
     layout: 'basic',
@@ -1161,6 +1173,12 @@ router.get('/web', function (req, res) {
               ],
             },
           ],
+        },
+      ],
+    },
+  })
+})
+
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1993,8 +2011,10 @@ router.get('/shoporder', function (req, res) {
           link: 'https://www.youtube.com/about/',
         },
       ],
-    ],
+    ], 
 
+  })
+})
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -2085,19 +2105,11 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
-
   })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-// ================================================================
+  })
+  
 
 
-// ================================================================
-
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcart', function (req, res) {
@@ -2641,7 +2653,7 @@ router.get('/shopreview', function (req, res) {
 // ================================================================
 // Підключаємо роутер до бек-енду
 
-module.exports = router
+
 
 
 router.get('/car', function (req, res) {
@@ -2743,3 +2755,7 @@ router.get('/car', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+
+// Підключаємо роутер до бек-енду
+module.exports = router
