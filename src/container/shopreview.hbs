@@ -128,30 +128,6 @@
 </div>
 {{/with}}
 {{/with}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
    
   <div class="m-5">
   <hr>
@@ -226,6 +202,17 @@
 </div>
 
 
+
+
+ {{#with navigation}}
+
+  <div class="nav">
+    {{#each links}}
+    <div class="nav-tabs">
+          <a class="nav-link" href="{{link}}">{{text}}</a>
+          </div>
+         {{/each}}
+ {{/with}}
 
 
   </main>
