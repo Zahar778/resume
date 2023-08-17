@@ -1,0 +1,43 @@
+{{#each goodsList}}
+<div class="col-6"> <!-- Размещение catalogltem в колонке по 2 -->
+      <div class="card mt-4">
+      <img class='card-img-top' src='{{img}}' alt='photo'/>
+      <div class='card-body'>
+        {{#if isHot}}
+          <button class="btn btn-warning rounded-pill btn-sm">HOT</button>
+        {{/if}}
+        {{#if isNew}}
+          <button class="btn btn-primary rounded-pill btn-sm">New</button>
+        {{/if}}
+        {{#if isFast}}
+          <div><button class="btn btn-success btn-sm mt-2">Швидка доставка</button></div>
+        {{/if}}
+        {{#if isFree}}
+          <div><button class="btn btn-secondary btn-sm mt-2">Безкоштовна доставка</button></div>
+        {{/if}}
+        <h5 class='card-title mt-2'>{{name}}</h5>
+        {{#with review}}
+          <div>{{amount}} {{text}}</div>
+        {{/with}}
+        <h5 class='mt-2'><b>{{price}}</b></h5>
+        <div>{{delivery}}</div>
+        {{#each buttons}}
+          {{#if isPrimary}}
+          <a href="{{link}}" target="_blank" class="btn btn-primary mt-2">{{text}}</a>
+          {{/if}}
+          {{#if isSecondary}}
+          <a href="{{link}}" target="_blank" class="btn btn-secondary mt-2">{{text}}</a>
+          {{/if}}
+        {{/each}}
+        <ul class='mt-2'>
+        {{#each characteristics}}
+          <li>{{title}}: {{value}}</li>
+         
+        {{/each}}
+        </ul>
+      </div> </div>
+      </div>      
+
+{{/each}}
+
+

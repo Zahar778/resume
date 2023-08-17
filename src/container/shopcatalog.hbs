@@ -1,0 +1,155 @@
+<main class="p-5">
+
+  <div class="card">
+    <div class="nav">
+      <div class="nav item">
+        {{#with navigation}}
+          {{#each links}}
+          <a href="{{href}}" class="nav-link" target="_blank">{{text}}</a>
+          {{/each}}
+        {{/with}}
+      </div>
+    </div>
+  </div>
+  
+  <div class="breadcrumb mt-4">
+    {{#each breadcrumb}}
+      <div class="breadcrumb-item">
+        {{#if url}}
+        <a href="{{url}}">{{name}}</a>
+        {{else}}
+        <a href="#">{{name}}</a>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+  
+  <div class="mt-4"><h1>{{header}}</h1></div>
+
+<div class="row">
+
+    {{#each sortBlock}}
+      <div class="col-3 mt-4">
+      <label class="form-label"></label>
+      <select class="form-select">
+        <option selected>{{placeholder}}</option>
+        {{#each options}}
+          <option value="{{value}}">{{text}}</option>
+        {{/each}}
+      </select>
+      </div>
+    {{/each}}
+
+    <div class="row">
+  {{#with filterBlock}}
+    <div class="col-4 mt-4 "> 
+        <div class="card p-3">
+
+    
+      <div class="col-4 mt-4">
+        <div class="card p-3">
+          {{#with sellers}}
+            <div class="mb-2">{{title}}</div>
+            {{#each list}}
+              <div class="form-check">
+                <label class="form-check-label">{{value}}</label>
+                <input type="checkbox" class="form-check-input">
+              </div>
+            {{/each}}
+          {{/with}}
+          <hr />
+          {{#with brands}}
+            <div class="mb-2">{{title}}</div>
+            {{#with input}}
+              <input class="form-control mb-2" placeholder="{{placeholder}}">
+            {{/with}}
+            {{#each options}}
+              <div class="form-check">
+                <label class="form-check-label">{{value}}</label>
+                <input type="checkbox" class="form-check-input">
+              </div>
+            {{/each}}
+          {{/with}}
+          <hr />
+          {{#with price}}
+            <div class="mb-2">{{title}}</div>
+            {{#with range}}
+              <input class="form-control mb-2" placeholder="{{from}}">
+              <input class="form-control mb-2" placeholder="{{to}}">
+            {{/with}}
+            {{#with button}}
+              <div>
+                <a href="{{link}}" target="_blank" class="btn btn-outline-secondary">
+                  {{text}}
+                </a>
+              </div>
+            {{/with}}
+          {{/with}}
+          <hr />
+          {{#each filterList}}
+            <div class="mb-2">{{title}}</div>
+            {{#each options}}
+              <div class="form-check">
+                <label class="form-check-label">{{value}}</label>
+                <input type="checkbox" class="form-check-input">
+              </div>
+            {{/each}}
+            <hr />
+          {{/each}}
+          
+        </div>
+         </div>
+         </div>
+         
+      </div>
+
+           {{/with}}
+
+    <div class="col-8"> <!-- Используйте оставшиеся 8 колонок для содержимого filterBlock -->
+        <div class="row">
+
+        {{> catalogltem}}
+ </div>
+  
+      
+        </div>
+    </div>
+</div>
+
+
+
+  {{#with service}}
+    <div class="row my-5">
+      <div class='card text-bg-success'>
+        <div class="card-body text-center">
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+          {{#each buttons}}
+            <div class="mb-2">
+              <a href='{{link}}' target='_blank' class='btn btn-primary'>
+                {{text}}
+              </a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{/with}}
+
+  <hr />
+
+  <div class='row'>
+    <div class="nav">
+      {{#each footer}}
+        <div class='col-2'>
+        {{#each this}}
+          <a href={{link}} class='nav-link' target='_blank'>
+            {{text}}
+          </a>
+        {{/each}}     
+        </div>
+      {{/each}}
+    </div>
+  </div>
+ 
+</main>
